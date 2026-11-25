@@ -63,3 +63,14 @@ Each tracked object shall contain at least:
 
 The published object list shall be associated with the corresponding
 input frame and timestamp.
+
+## Performance Requirements
+
+### FOP-PR-001: Processing Throughput
+
+The Forward Object Perception feature shall target an average
+processing throughput of at least 25 frames per second on the
+defined reference hardware.
+
+The achieved throughput shall be measured and reported during
+performance verification.
