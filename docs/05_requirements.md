@@ -24,3 +24,42 @@ road users across consecutive camera frames.
 
 Each tracked road user shall be assigned a track identifier that
 enables the same object to be distinguished from other tracked objects.
+
+### FOP-FR-004: Track Identity Persistence
+
+The Forward Object Perception feature shall maintain the same track
+identifier for a road user across consecutive frames while that road
+user remains successfully tracked.
+
+### FOP-FR-005: Temporary Track Loss
+
+The Forward Object Perception feature shall support temporary loss
+of object detections without immediately terminating the corresponding
+track.
+
+The duration for which a track may remain without an associated
+detection shall be configurable.
+
+### FOP-FR-006: Track Termination
+
+The Forward Object Perception feature shall terminate a track when
+the configured track deletion criteria are satisfied.
+
+A terminated track shall no longer be included in the published list
+of active tracked road users.
+
+### FOP-FR-007: Tracked Object Output
+
+The Forward Object Perception feature shall publish a tracked-object
+list for each successfully processed camera frame.
+
+Each tracked object shall contain at least:
+
+- Track identifier
+- Object class
+- 2D bounding box
+- Confidence
+- Track state
+
+The published object list shall be associated with the corresponding
+input frame and timestamp.
